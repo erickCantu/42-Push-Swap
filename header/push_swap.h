@@ -13,8 +13,8 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "000_libft/libft.h"
-# include "001_libftprintf/ft_printf.h"
+# include "../utils/000_libft/libft.h"
+# include "../utils/001_libftprintf/ft_printf.h"
 # include <limits.h>
 # include <stdarg.h>
 

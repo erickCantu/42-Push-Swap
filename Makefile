@@ -16,9 +16,11 @@ CC = cc
 
 CFLAGS := -Wall -Werror -Wextra
 
-SRC_LIBFT := 000_libft/
+SRC_LIBFT := utils/000_libft/
 
-SRC_LIBFTPRINTF := 001_libftprintf/
+SRC_LIBFTPRINTF := utils/001_libftprintf/
+
+SRC_PUSHSWAP := src/
 
 CFILES_LIBFT := \
 	ft_isalpha.c \
@@ -106,15 +108,15 @@ CFILES_PUSH_SWAP := \
 	push_swap_solve.c \
 	push_swap_utils.c \
 	push_swap_utils_node.c \
-	push_swap_utils_stack.c 
+	push_swap_utils_stack.c \
 	
-
-OFILES_PUSH_SWAP := $(CFILES_PUSH_SWAP:.c=.o)
+	
+OFILES_PUSH_SWAP := $(addprefix $(SRC_PUSHSWAP), $(CFILES_PUSH_SWAP:.c=.o))
 
 all: ps 
 
 ps: $(NAME)
-	$(CC) $(CFLAGS) push_swap.c $(NAME) -o push_swap
+	$(CC) $(CFLAGS) src/push_swap.c $(NAME) -o push_swap
 
 
 $(NAME): $(OFILES_LIBFT) $(OFILES_PRINTF) $(OFILES_PUSH_SWAP)

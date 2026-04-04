@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_bonus.c                                  :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecantu-p <ecantu-p@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:37:24 by ecantu-p          #+#    #+#             */
-/*   Updated: 2026/03/14 18:03:55 by ecantu-p         ###   ########.fr       */
+/*   Created: 2026/02/24 11:08:22 by ecantu-p          #+#    #+#             */
+/*   Updated: 2026/03/14 18:03:23 by ecantu-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-static void	ps_check_solution_bonus(t_stack stack_a, t_stack_solutions sol)
-{
-	if (ps_check_solution(stack_a, sol))
-		ft_printf("OK\n");
-	else
-		ft_printf("KO\n");
-}
+#include "../header/push_swap.h"
 
 int	main(int argc, char *argv[])
 {
@@ -42,7 +34,6 @@ int	main(int argc, char *argv[])
 	}
 	ps_initialize_avg_std(&stack_a, &stack_b, sol.mtx);
 	ps_solve_selection(&stack_a, &stack_b, &sol, &count);
-	ps_check_solution_bonus(stack_a, sol);
 	ps_endroutine(argc, stack_a, stack_b, &sol);
 	return (0);
 }
