@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../header/push_swap.h"
 
 int	ps_check_solution(t_stack stack_a, t_stack_solutions sol)
 {

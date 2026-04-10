@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../header/push_swap.h"
 
 void	ps_add_tail_solution(t_stack_solutions *stack, t_node_solution *node)
 {
