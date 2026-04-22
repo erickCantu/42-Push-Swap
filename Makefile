@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ecantu-p <ecantu-p@student.42wolfsburg.    +#+  +:+       +#+         #
+#    By: mracz <mracz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 11:50:59 by ecantu-p          #+#    #+#              #
-#    Updated: 2026/03/14 15:41:38 by ecantu-p         ###   ########.fr        #
+#    Updated: 2026/04/22 20:49:00 by mracz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@ NAME := push_swap.a
 
 CC = cc
 
-CFLAGS := -Wall -Werror -Wextra
+CFLAGS := -Wall -Werror -Wextra -I headers -I utils
 
-SRC_LIBFT := 000_libft/
+SRC_LIBFT := utils/000_libft/
 
-SRC_LIBFTPRINTF := 001_libftprintf/
+SRC_LIBFTPRINTF := utils/001_libftprintf/
 
 CFILES_LIBFT := \
 	ft_isalpha.c \
@@ -108,13 +108,13 @@ CFILES_PUSH_SWAP := \
 	push_swap_utils_node.c \
 	push_swap_utils_stack.c 
 	
-
-OFILES_PUSH_SWAP := $(CFILES_PUSH_SWAP:.c=.o)
+SRC_PUSH_SWAP := src/
+OFILES_PUSH_SWAP := $(addprefix $(SRC_PUSH_SWAP), $(CFILES_PUSH_SWAP:.c=.o))
 
 all: ps 
 
 ps: $(NAME)
-	$(CC) $(CFLAGS) push_swap.c $(NAME) -o push_swap
+	$(CC) $(CFLAGS) src/push_swap.c $(NAME) -o push_swap
 
 
 $(NAME): $(OFILES_LIBFT) $(OFILES_PRINTF) $(OFILES_PUSH_SWAP)
