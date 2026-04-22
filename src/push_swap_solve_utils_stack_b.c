@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../header/push_swap.h"
 
 void	ps_solve_counter_stack_b(t_counters count, t_stack *stack_b)
 {

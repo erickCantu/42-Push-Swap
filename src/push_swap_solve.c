@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../header/push_swap.h"
 
 void	ps_ini_sort_1_node(t_stack *stack_dst, t_stack *stack_src)
 {

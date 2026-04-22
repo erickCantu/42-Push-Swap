@@ -20,6 +20,8 @@ SRC_LIBFT := utils/000_libft/
 
 SRC_LIBFTPRINTF := utils/001_libftprintf/
 
+SRC_PUSHSWAP := src/
+
 CFILES_LIBFT := \
 	ft_isalpha.c \
 	ft_isdigit.c \
@@ -106,10 +108,10 @@ CFILES_PUSH_SWAP := \
 	push_swap_solve.c \
 	push_swap_utils.c \
 	push_swap_utils_node.c \
-	push_swap_utils_stack.c 
+	push_swap_utils_stack.c \
 	
-SRC_PUSH_SWAP := src/
-OFILES_PUSH_SWAP := $(addprefix $(SRC_PUSH_SWAP), $(CFILES_PUSH_SWAP:.c=.o))
+	
+OFILES_PUSH_SWAP := $(addprefix $(SRC_PUSHSWAP), $(CFILES_PUSH_SWAP:.c=.o))
 
 all: ps 
 

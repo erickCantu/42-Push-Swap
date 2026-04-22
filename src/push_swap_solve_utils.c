@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../header/push_swap.h"
 
 void	ps_solve_3_asc_algorithm(t_stack *stack, char stack_name)
 {
